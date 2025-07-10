@@ -7,7 +7,7 @@ public class VentanaSecundaria extends JDialog {
 
     public VentanaSecundaria(JFrame padre) {
         super(padre, "Ventana Secundaria", true);
-        setSize(350, 150);
+        setSize(600, 600);
         setLocationRelativeTo(padre);
 
         // Mostrar mensaje al crear la ventana
@@ -17,5 +17,12 @@ public class VentanaSecundaria extends JDialog {
                 "Información",
                 JOptionPane.INFORMATION_MESSAGE
                 );
+
+        // Crear un JLabel con la imagen
+        ImageIcon imagen = new ImageIcon(getClass().getResource("/interfas/PERRAZO.jpg"));
+        JLabel labelImagen = new JLabel(imagen);
+
+        // Agregar la imagen al JFrame
+        add(labelImagen);
 }
 }
